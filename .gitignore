@@ -1,25 +1,23 @@
-# CakePHP 3
+<?php
+function findLargest($num1, $num2, $num3) {
+    $largest = $num1;
+    
+    if ($num2 > $largest) {
+        $largest = $num2;
+    }
+    
+    if ($num3 > $largest) {
+        $largest = $num3;
+    }
+    
+    return $largest;
+}
 
-/vendor/*
-/config/app.php
+$num1 = 10;
+$num2 = 5;
+$num3 = 8;
 
-/tmp/cache/models/*
-!/tmp/cache/models/empty
-/tmp/cache/persistent/*
-!/tmp/cache/persistent/empty
-/tmp/cache/views/*
-!/tmp/cache/views/empty
-/tmp/sessions/*
-!/tmp/sessions/empty
-/tmp/tests/*
-!/tmp/tests/empty
+$largestNumber = findLargest($num1, $num2, $num3);
+echo "The largest number is: " . $largestNumber;
+?>
 
-/logs/*
-!/logs/empty
-
-# CakePHP 2
-
-/app/tmp/*
-/app/Config/core.php
-/app/Config/database.php
-/vendors/*
